@@ -103,8 +103,7 @@ export function registerUser(userData: {
     phone: userData.phone,
     fullName: userData.fullName,
     username: userData.username,
-    isVerified: false,
-    createdAt: new Date().toISOString()
+    emailVerified: false,
   }
 
   // Guardar usuario

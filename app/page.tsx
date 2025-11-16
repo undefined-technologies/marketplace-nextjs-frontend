@@ -32,12 +32,12 @@ export default function Home() {
   })
 
   useEffect(() => {
-    // const user = getCurrentUser()
-    // setIsLoggedIn(!!user)
-    // if (user) {
-    //   setCartCount(getCartCount())
-    // }
-    setIsLoggedIn(true)
+    const user = getCurrentUser()
+    setIsLoggedIn(!!user)
+    if (user) {
+      setCartCount(getCartCount())
+    }
+    // setIsLoggedIn(true)
   }, [])
 
   const handleAddToCart = (productId: string) => {

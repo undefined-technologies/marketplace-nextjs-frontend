@@ -42,7 +42,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   useEffect(() => {
     const user = getCurrentUser()
-    setIsLoggedIn(true)
+    setIsLoggedIn(!!user)
     if (user) {
       setCartCount(getCartCount())
     }
