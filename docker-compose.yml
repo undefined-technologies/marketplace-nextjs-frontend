@@ -1,0 +1,8 @@
+services:
+  marketplace:
+    container_name: marketplace-marketplace
+    build: .
+    environment:
+      PORT: 4000
+    ports:
+      - "8080:4000"
