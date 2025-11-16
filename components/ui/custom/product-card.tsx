@@ -23,7 +23,7 @@ export function ProductCard({ product, onAddToCart, isLoggedIn }: ProductCardPro
             className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
           {product.stock < 10 && (
-            <div className="absolute right-2 top-2 rounded-md bg-secondary px-2 py-1 text-xs font-light text-secondary-foreground sm:right-3 sm:top-3 sm:px-3">
+            <div className="absolute right-2 top-2 rounded-md bg-secondary px-2 py-1 text-xs font-semibold text-white sm:right-3 sm:top-3 sm:px-3">
               Solo {product.stock}
             </div>
           )}

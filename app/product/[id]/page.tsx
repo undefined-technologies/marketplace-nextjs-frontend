@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { mockProducts, Product } from '@/lib/db'
-// import { getCurrentUser } from '@/lib/auth'
+import { getCurrentUser } from '@/lib/auth'
 import { addToCart, getCartCount } from '@/lib/cart'
 import { Header } from '@/components/ui/custom/header'
 import { ShoppingCart, Package, Truck, Shield } from 'lucide-react'
@@ -41,12 +41,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   }
 
   useEffect(() => {
-    // const user = getCurrentUser()
-    // setIsLoggedIn(!!user)
+    const user = getCurrentUser()
     setIsLoggedIn(true)
-    // if (user) {
-    //   setCartCount(getCartCount())
-    // }
+    if (user) {
+      setCartCount(getCartCount())
+    }
   }, [])
 
   const handleAddToCart = () => {

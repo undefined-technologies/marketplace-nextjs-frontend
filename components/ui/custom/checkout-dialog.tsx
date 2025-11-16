@@ -240,13 +240,9 @@ function LocationSelector({ onLocationSelected }: { onLocationSelected: (lat: nu
 
     const L = (window as any).L
 
-    // Initialize map
-    const map = L.map('map').setView([10.4806, -66.9036], 13) // Caracas, Venezuela
+    const map = L.map('map').setView([23.1339, -82.3586], 14)
 
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
 
     let marker: any = null
 

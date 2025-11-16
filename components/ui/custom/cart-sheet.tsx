@@ -155,7 +155,7 @@ export function CartSheet({ open, onOpenChange, onCheckout, onCartUpdate }: Cart
               </div>
             </div>
 
-            <div className="border-t pt-4">
+            <div className="border-t p-4">
               <div className="mb-4 flex items-center justify-between">
                 <span className="text-lg font-semibold">Total:</span>
                 <span className="text-2xl font-bold text-primary">

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { mockProducts, Product } from '@/lib/db'
-// import { getCurrentUser } from '@/lib/auth'
+import { getCurrentUser } from '@/lib/auth'
 import { addToCart, getCartCount } from '@/lib/cart'
 import { ProductCard } from '@/components/ui/custom/product-card'
 import { Header } from '@/components/ui/custom/header'
@@ -34,10 +34,10 @@ export default function Home() {
   useEffect(() => {
     // const user = getCurrentUser()
     // setIsLoggedIn(!!user)
-    setIsLoggedIn(true)
     // if (user) {
     //   setCartCount(getCartCount())
     // }
+    setIsLoggedIn(true)
   }, [])
 
   const handleAddToCart = (productId: string) => {

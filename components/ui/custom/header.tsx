@@ -61,7 +61,7 @@ export function Header({ isLoggedIn, cartCount, onCartUpdate }: HeaderProps) {
                   <ShoppingCart className="h-4 w-4" />
                   <span className="hidden sm:inline">Carrito</span>
                   {cartCount > 0 && (
-                    <Badge className="absolute -right-1 -top-1 h-5 w-5 rounded-full bg-secondary p-0 text-xs font-light">
+                    <Badge className="absolute -right-1 -top-1 h-5 w-5 rounded-full bg-secondary p-0 text-xs font-semibold">
                       {cartCount}
                     </Badge>
                   )}
