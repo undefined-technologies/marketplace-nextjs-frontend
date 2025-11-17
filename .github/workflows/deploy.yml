@@ -48,7 +48,11 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
           script: |
-            docker container stop next-marketplace
-            docker container rm next-marketplace
-            docker container run -d --name next-marketplace -p 4090:3000 ${{ secrets.DOCKER_USERNAME }}/next-marketplace:${{ github.sha }}
+            docker container stop next-marketplace || true
+            docker container rm next-marketplace || true
+            docker run -d --name next-marketplace \
+            -p 4090:3000 \
+            -e PORT=3000 \
+            --restart unless-stopped \
+            ${{ secrets.DOCKER_USERNAME }}/next-marketplace:${{ github.sha }}
             docker image prune -f
